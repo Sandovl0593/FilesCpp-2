@@ -29,3 +29,4 @@ int main() {
     set<int> no_r_numbers(numbers.begin(), numbers.end());
     cout << numbers.size() << endl;  // out: 8
     cout << no_r_numbers.size() << endl;  // out: 5
+}

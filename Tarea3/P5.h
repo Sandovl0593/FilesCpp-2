@@ -2,12 +2,12 @@
 #define PROG3_TAREA3_P5_H
 #include <iostream>
 #include <utility>
-#include <algorithm>
+#include <tuple>
 using namespace std;
 
 template <class ... Type>
-tuple<Type...> unpack(Type&&... types) {
-    tuple<Type...> pack(forward<Type>(types)...);
+tuple<Type&...> unpack(Type&... types) {
+    tuple<Type&...> pack(types...);
     return pack;
 }
 

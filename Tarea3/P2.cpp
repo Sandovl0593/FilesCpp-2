@@ -6,10 +6,10 @@
 using namespace std;
 
 
-/* int main() {
+int main() {
     stringstream os;
-    list<int> l1 = { 10, 20, 30, 40, 50, 60, 70 };
-    list<int> l2 = { 4, 8 };
+    list<int> l1 = { 1, 2, 3, 4, 5 };
+    list<int> l2 = { 10, 20 };
     auto res1 = sum_range(l1, l2);
     for (const auto& item : res1)
         cout << item << " ";
@@ -19,4 +19,4 @@ using namespace std;
     auto res2 = sum_range(fl1, fl2);
     for (const auto& item : res2)
         cout << item << " ";
-} */
+} 

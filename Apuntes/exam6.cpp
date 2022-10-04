@@ -36,9 +36,9 @@ void sub_exam2() {
     // contar elementos bajo una condicion con lambdas 
     cout << count_if(begin(ls), end(ls), [] (int x) { return x % 2 == 0; }  );
 
-    // contar elementos bajo una condicion definida on parametros modificables
+    // contar elementos bajo una condicion definida con parametros modificables
     cout << count_if(begin(ls), end(ls), [&div] (int x) { return x % ++div == 0; }  );
-    /* Los parametros no locales pueden ser modificables si no se declara por defecto */
+    /* Los parametros no locales son modificables si no se declara por defecto */
 }
 
 
