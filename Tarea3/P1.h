@@ -18,12 +18,12 @@ vector<vector<int>> split_range(Cont<int> conten, int num) {
     vector<vector<int>> result;
     for (int i=1; i<=num; i++) {
         vector<int> sub;
-        while (it < next(begin(conten), i*sub_size)) {
-            sub.push_back(*it);   it++;
+        while (it != next(begin(conten), i*sub_size)) {
+            sub.push_back(*it);   advance(it, 1);
         }
         result.push_back(sub);
     }
-    for (; it != next(begin(conten), size); it++)  result[num-1].push_back(*it);
+    for (; it != next(begin(conten), size); advance(it, 1))  result[num-1].push_back(*it);
     return result;
 }
 

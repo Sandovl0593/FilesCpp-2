@@ -4,7 +4,7 @@
 #include "P5.h"
 using namespace std;
 
-int main() {
+/* int main() {
     std::tuple<int, string, string, double> t1 = { 1321, "Jose", "Perez", 1.68 };
     int key; string first_name; string last_name; double height;
     unpack(key, first_name, last_name, height) = t1;
@@ -14,4 +14,4 @@ int main() {
     string text1; string text2; char flag;
     unpack(text1, text2, flag) = t2;
     cout << text1 << " " << text2 << " " << flag;
-}
+} */

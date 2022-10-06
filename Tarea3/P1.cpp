@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <forward_list>
+#include <iterator>
 #include <deque>
 #include "P1.h"
 using namespace std;
