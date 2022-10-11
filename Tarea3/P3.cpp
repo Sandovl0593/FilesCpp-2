@@ -2,7 +2,7 @@
 #include <iterator>
 #include <list>
 #include <deque>
-#include "P3.h"
+#include "p3.h"
 using namespace std;
 
 

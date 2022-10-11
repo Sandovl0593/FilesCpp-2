@@ -2,7 +2,7 @@
 #include <sstream>
 #include <list>
 #include <forward_list>
-#include "P2.h"
+#include "p2.h"
 using namespace std;
 
 /* int main() {

@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include "P6.h"
+#include "p6.h"
 using namespace std;
 
-int main() {
+/* int main() {
     list<int> l1 = { 11, 12, 13 };
     list<int> l2 = { 21, 22, 23 };
     list<int> l3 = { 31, 32, 33 };
@@ -20,9 +20,9 @@ int main() {
     vector<int> v3 = { 31, 32, 33, 34, 35 };
     vector<int> v4 = { 41, 42, 43, 44, 45 };
     auto r2 = zip(v1, v2, v3, v4);
-    for (const auto& row : r2) {
-        for (const auto& value : row)
-            cout << value << " ";
+    for (const auto& row2 : r2) {
+        for (const auto& value2 : row2)
+            cout << value2 << " ";
         cout << endl;
     }
-}
+}  */

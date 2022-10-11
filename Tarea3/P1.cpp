@@ -4,11 +4,10 @@
 #include <forward_list>
 #include <iterator>
 #include <deque>
-#include "P1.h"
+#include "p1.h"
 using namespace std;
 
 /* int main() {
-
     deque<int> cnt {istream_iterator<int>(cin), istream_iterator<int>()};
     // deque<int> cnt = {3,4,5,6,7,8, 9, 10, 11, 12};
     auto res1 = split_range(cnt, 5);
