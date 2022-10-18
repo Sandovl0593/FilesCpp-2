@@ -11,17 +11,17 @@ int main() {
         cout << fs0.top() << " ";
         fs0.pop();
     }
-    // fixed_stack<int, 100> fs1;
-    // copy(istream_iterator<int>(cin), istream_iterator<int>(), fixed_stack_pusher(fs1));
-    fixed_stack<int, 8> fs1 = {1, 2, 3, 4, 5, 6, 7, 8};
+
+    fixed_stack<int, 100> fs1;
+    copy(istream_iterator<int>(cin), istream_iterator<int>(), fixed_stack_pusher(fs1));
     while (!fs1.empty()){
         cout << fs1.top() << " ";
         fs1.pop();
     }
 
     fixed_stack<float, 100> fs2;
-    vector<float> vc2{istream_iterator<float>(cin), istream_iterator<float>()};
-    // vector<float> vc2 = {1, 2, 3, 4, 5, 6, 7, 8};
+    // vector<float> vc2{istream_iterator<float>(cin), istream_iterator<float>()};
+    vector<float> vc2 = {1, 2, 3, 4, 5, 6, 7, 8};
     for(const auto& item: vc2)
         fs2.push(item);
     while (!fs2.empty()){
