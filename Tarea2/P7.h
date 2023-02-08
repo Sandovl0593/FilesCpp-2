@@ -1,50 +1,46 @@
 #ifndef PROG3_TAREA2_P7_H
 #define PROG3_TAREA2_P7_H
 #include <iostream>
-#include <vector>
 #include <map>
 #include <array>
 using namespace std;
 
-// void print(string resp) { cout << resp; }
-ostream& operator<<(ostream& os, string value);
-
-template <typename Container>
-ostream& operator<<(ostream& os, Container value) {
-    string resp = "{";
-    for (const auto &i: value)  resp += to_string(i)+", ";
-    resp[resp.size()-2] = '}';
-    os << resp;
+template <template <class ...> class Container, typename T>
+ostream& operator<<(ostream& os, Container<T>& lst) {
+    int it = 0;
+    os << "{";
+    for (auto &i: lst) {
+        it++;  os << i;
+        if (it < lst.size())  os << ", ";
+    }
+    os << "}";
     return os;
 }
 
-// template <template <class...> class Type, typename T> 
-// ostream& operator<< <Type<T>>(ostream& os1, Type<T> value){
-//     string resp = "{";
-//     for (const auto &i: value)  resp += to_string(i)+", ";
-//     resp[resp.size()-2] = '}';
-//     os1 << resp;
-//     return os1;
-// }
 
-// template <typename T, int size> 
-// ostream& operator<< <array<T, size>>(ostream& os, array<T, size> value){
-//     string resp = "{";
-//     for (const auto &i: value)  resp += to_string(i)+", ";
-//     resp[resp.size()-2] = '}';
-//     os << resp;
-//     return os;
-// }
+template <typename T, size_t size>
+ostream& operator<<(ostream& os, array<T, size>& arr) {
+    int it = 0;
+    os << "{";
+    for (auto &i: arr) {
+        it++;  os << i;
+        if (it < size)  os << ", ";
+    }  
+    os << "}";
+    return os;
+}
+
 
 template <typename T, typename U>
-ostream& operator<< <map<T, U>>(ostream& os, map<T, U> value){
-    string resp = "{";
-    for (const auto &p: value) {
-        string s(1, p.first);
-        resp += '{' + s + ": " + to_string(p.second) + "}, ";
+ostream& operator<<(ostream& os, map<T, U>& map) { 
+    int it = 0;
+    os << "{";
+    for (auto &pair: map) {
+        os << "{" << pair.first << ": " << pair.second << "}";
+        it++;
+        if (it < map.size())   os << ", ";
     }
-    resp[resp.size()-2] = '}';
-    os << resp;
+    os << "}";
     return os;
 }
 

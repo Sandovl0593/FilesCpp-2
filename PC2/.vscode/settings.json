@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.rmd": "markdown",
+        "*.py": "python",
+        "*.cpp": "cpp",
+        "*.html": "html",
+        "*.R": "r",
+        "*.h": "cpp",
+        "*.js": "javascript",
+        "*.css": "css",
+        "*.cmake": "cmake",
+        "*.bat": "bat",
+        "*.md": "markdown",
+        "*.json": "json",
+        "*.vue": "vue",
+        "iostream": "cpp"
+    }
+}

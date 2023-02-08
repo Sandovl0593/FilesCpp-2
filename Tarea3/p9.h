@@ -18,6 +18,8 @@ struct is_unique_ptr<unique_ptr<T>>: true_type {};
 //     pair<int, int>* fred = new pair<int, int>(value->first, value->second);
 //     return fred;
 // }
+template <typename T, int sz>
+class fixed_stack_pusher;
 
 template <typename T, int sz>
 class fixed_stack {
@@ -54,21 +56,28 @@ public:
     auto gbegin() { return list.begin(); }
 
     ~fixed_stack() { list.clear(); }
+
+    friend class fixed_stack_pusher<T, sz>;
 };
 
-template <int sz>
+template <typename T, int sz>
 class fixed_stack_pusher {
-    fixed_stack<int, sz> contain;
-    vector<int>::iterator elem;
+    fixed_stack<T, sz> contain;
+    vector<T>::iterator elem;   
 public:
-    fixed_stack_pusher(fixed_stack<int, sz> stack): contain(stack) {
+    fixed_stack_pusher(fixed_stack<T, sz> stack): contain(stack) {
         this -> elem = contain.gbegin();
     }
-    vector<int>::iterator operator() (fixed_stack<int, sz> stack) { return elem; }
+    vector<T>::iterator operator() (fixed_stack<T, sz> stack) { return elem; }
 
-    fixed_stack_pusher operator++() { advance(elem, 1);  return *this; }
-    auto operator*() { return *elem; }
+    fixed_stack_pusher& operator++() { advance(elem, 1);  return *this; }
 
+    fixed_stack_pusher& operator=(T value) {
+        list.push(value);
+        return *this;
+    }
+
+    fixed_stack_pusher& operator*() { return *this; }
 };
 
 #endif //PROG3_TAREA3_P9_H

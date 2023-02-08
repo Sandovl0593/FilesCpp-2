@@ -90,5 +90,6 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/Tarea3"
 }

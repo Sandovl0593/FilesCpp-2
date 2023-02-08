@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <type_traits>
 #include "P8.h"
-#include <typeinfo>
 using namespace std;
-
