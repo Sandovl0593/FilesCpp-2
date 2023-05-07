@@ -1,7 +1,0 @@
-
-# algoritmo de Kruskal
-
-verticetemporal =  A
-pesos 
-for cada vertice adyacente de "verticetemporal"
-    agregar los pesos
